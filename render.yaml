@@ -2,7 +2,7 @@ services:
   - type: web
     name: n8n-app
     env: docker
-    dockerhubImage: n8nio/n8n
+    image: n8nio/n8n
     envVars:
       - key: N8N_PORT
         value: "5678"
@@ -28,8 +28,7 @@ services:
         fromDatabase:
           name: n8n-db
           property: password
-    ports:
-      - 5678:5678
+
 databases:
   - name: n8n-db
     plan: free
