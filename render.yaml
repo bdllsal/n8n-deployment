@@ -2,8 +2,7 @@ services:
   - type: web
     name: n8n-app
     env: docker
-    image:
-      image: n8nio/n8n
+    image: n8nio/n8n
     envVars:
       - key: N8N_PORT
         value: "5678"
@@ -33,6 +32,3 @@ services:
 databases:
   - name: n8n-db
     plan: free
-
-  
-
